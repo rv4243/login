@@ -1,0 +1,59 @@
+<div mat-dialog-title>
+  <h1>Employee Form</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Poduct</mat-label>
+        <input matInput type="text" placeholder="Ex. Technical" formControlName="product">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="description">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Long Description</mat-label>
+        <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="longdescription">
+      </mat-form-field>
+    </div>
+
+    <div class="">
+      <button type="button" (click)="fileInput.click()" mat-raised-button>Choose File</button>
+      <input hidden #fileInput type="file" formControlName="image" required>
+      </div>
+      <br>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+          <mat-option *ngFor="let val of category" [value]="val">{{val}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="Ex. 300" formControlName="price">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Stock</mat-label>
+        <input matInput placeholder="Ex. 4" type="number" formControlName="stock">
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Update': 'Save'}}</button>
+  </div>
+</form>

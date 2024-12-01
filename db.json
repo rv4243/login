@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "product": "Saree",
+      "description": "Free shipping",
+      "longdescription": "ROYAL DOLA SEQUENCE SILK😍😍😍😍😍😍😍 \n EXCLUSIVE PREMIUM SOFT DOLA SILK \n WITH INBUILT SEQUENCE WORK ALL OVER  \n THE SAREE  WITH RICH BENTEX CONTRAST JARI WEAVING BORDER N RUNNING BLOUSE  \n *SINGLES N MULTIPLES",
+      "image": "C:\\fakepath\\_️_Epic_Spider-Man_Miles_Morales_4K_Wallpaper_____Marvel_Superhero_Vibes-removebg-preview.png",
+      "category": "Saree",
+      "price": "100",
+      "stock": 11,
+      "id": "35"
+    }
+  ]
+}
